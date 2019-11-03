@@ -1,0 +1,10 @@
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\bin\Debug\GameButton.exe.config
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\bin\Debug\GameButton.exe
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\bin\Debug\GameButton.pdb
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.csprojAssemblyReference.cache
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.Form1.resources
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.Properties.Resources.resources
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.csproj.GenerateResource.cache
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.csproj.CoreCompileInputs.cache
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.exe
+C:\Users\SSASHKOO\source\repos\WF\GameButton\GameButton\obj\Debug\GameButton.pdb
