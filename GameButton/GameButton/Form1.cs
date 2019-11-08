@@ -13,14 +13,18 @@ namespace GameButton
 {
     public partial class Form1 : Form
     {
+
+        private int maxTime { get; set; }
+
         public Form1()
         {
             InitializeComponent();
+            maxTime = 10000;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(this.progressBar1.Value == 10000 && GetLastCheckedNumber() + 1 != GetCount() && buttonStart.Enabled == false)
+            if(this.progressBar1.Value == maxTime && GetLastCheckedNumber() + 1 != GetCount() && buttonStart.Enabled == false)
             {
                 buttonStart.Enabled = true;
                 MessageBox.Show("YOU LOSE!");
@@ -100,8 +104,10 @@ namespace GameButton
                 }
             }
 
+            maxTime = 10000 - trackBar1.Value*1000;
             buttonStart.Enabled = false;
             this.progressBar1.Value = 0;
+            this.progressBar1.Maximum = maxTime;
             this.timer1.Start();
         }
 
@@ -122,8 +128,6 @@ namespace GameButton
 
             return number;
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
