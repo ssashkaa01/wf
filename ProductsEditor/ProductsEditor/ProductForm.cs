@@ -95,12 +95,16 @@ namespace ProductsEditor
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            }
-            
+            }  
         }
 
-        private void comboBoxCountry_SelectedIndexChanged(object sender, EventArgs e)
+        public void DisableForm()
         {
+            textBoxName.Enabled = false;
+            comboBoxCountry.Enabled = false;
+            numericUpDownPrice.Enabled = false;
+            numericUpDownSale.Enabled = false;
+            numericUpDownCount.Enabled = false;
 
         }
     }

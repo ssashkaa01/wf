@@ -57,7 +57,7 @@ namespace ProductsEditor
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if(listProducts.SelectedIndex != -1)
+            if (listProducts.SelectedIndex != -1)
             {
 
                 Product product = (Product)products.Where(prod => prod.GetID() == listProducts.Text).FirstOrDefault();
@@ -92,11 +92,44 @@ namespace ProductsEditor
                         ReloadList();
                     }
                 }
-
-
             }
+        }
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (listProducts.SelectedIndex != -1)
+            {
+                Product product = (Product)products.Where(prod => prod.GetID() == listProducts.Text).FirstOrDefault();
 
+                int index = products.IndexOf(product);
+
+                products.RemoveAt(index);
+
+                ReloadList();
+            }
+        }
+
+        private void buttonDetails_Click(object sender, EventArgs e)
+        {
+            if (listProducts.SelectedIndex != -1)
+            {
+
+                Product product = (Product)products.Where(prod => prod.GetID() == listProducts.Text).FirstOrDefault();
+
+                using (ProductForm form = new ProductForm())
+                {
+                    form.SetButtonText("Закрити");
+                    form.DisableForm();
+                    form.SetName(product.name);
+                    form.SetPrice(product.price);
+                    form.SetSale(product.sale);
+                    form.SetCountry(product.country);
+                    form.SetCount(product.count);
+
+                    form.ShowDialog(this);
+
+                }
+            }
         }
     }
 }

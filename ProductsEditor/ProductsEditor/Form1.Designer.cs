@@ -63,6 +63,7 @@
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Видалити";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonDetails
             // 
@@ -72,6 +73,7 @@
             this.buttonDetails.TabIndex = 3;
             this.buttonDetails.Text = "Деталі";
             this.buttonDetails.UseVisualStyleBackColor = true;
+            this.buttonDetails.Click += new System.EventHandler(this.buttonDetails_Click);
             // 
             // listProducts
             // 
