@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,22 @@ namespace ProductsEditor
         public ProductForm()
         {
             InitializeComponent();
+        }
+
+        public bool CheckForm()
+        {
+            if(!Regex.Match(textBoxName.Text, @"[\w\s\d]+").Success)
+            {
+                MessageBox.Show("Некоректне ім\'я");
+                return false;
+            }
+            else if (comboBoxCountry.SelectedIndex == -1)
+            {
+                MessageBox.Show("Не вибрана країна");
+                return false;
+            }
+
+            return true;
         }
 
         public string GetName()
@@ -74,15 +91,17 @@ namespace ProductsEditor
 
         private void buttonAction_Click(object sender, EventArgs e)
         {
-            switch((sender as Button).Text)
+            if(CheckForm())
             {
-                case "Створити":
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                    break;
-
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             
+        }
+
+        private void comboBoxCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

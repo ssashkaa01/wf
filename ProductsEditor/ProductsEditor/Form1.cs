@@ -88,7 +88,7 @@ namespace ProductsEditor
                             country = form.GetCountry()
                         };
 
-                        products.Insert(index, product);
+                        products.Insert(index, edit);
                         ReloadList();
                     }
                 }

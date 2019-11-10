@@ -85,6 +85,8 @@
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(227, 28);
             this.comboBoxCountry.TabIndex = 2;
+            this.comboBoxCountry.Text = "Ukraine";
+            this.comboBoxCountry.SelectedIndexChanged += new System.EventHandler(this.comboBoxCountry_SelectedIndexChanged);
             // 
             // numericUpDownCount
             // 
